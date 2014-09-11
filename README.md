@@ -54,6 +54,8 @@ BASHCRASH
 - prettyprint json
 - json2csv
 
+### Z shell
+- z shell (zsh)
 
 ### Useful Links
 - [7 command-line tools for data science](http://jeroenjanssens.com/2013/09/19/seven-command-line-tools-for-data-science.html)
