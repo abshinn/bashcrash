@@ -1,61 +1,68 @@
 BASHCRASH
 ===
 
-### Useful for your time at Zipfian
-- Bash
-- Git
-
 ### Intro to BASH
 - History
-- Purpose of scripting
 - Unix Mantra
+- Purpose of scripting
 - AWS
 
-### Bash Basics
+### Envinronment
 - ~/.bash_profile
-- man
 - $PATH
 - alias
 - export
 - history
-- !#/usr/local/bin/
+- !#/usr/bin/env
+
+### Bash Basics
+- man
+- which
+- type
 - chmod
 - sudo
 - brew/apt-get
 - echo
 - cd/ls
 - mv/cp
+- find
+- bc
+- tar
+- say
+
+### Fetching data
+- curl/wget
+- scp
+
+### Displaying files and information
 - cat
 - head/tail
 - less/more
-- which
-- type
 - sort
 - uniq
 - wc
-- curl/wget
-- scp
-- tr
-- cut
-- find
+
+### Editing CSVs
 - grep
 - sed/awk
-- bc
-- tar
-- tree
-- say/cowsay
+- tr
+- cut
 
-### CSVKIT
-- pip install
+### Csvkit
+- `pip install csvkit`
 - csvlook
 - csvcut
+- csvsort
 
-### JQ
+### Jq
 - prettyprint json
-- json2csv
+- json2csv (go)
 
-### Z shell
-- z shell (zsh)
+### Recommended package manager
+- brew
+
+### Recommended shell, zsh
+- [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
 ### Useful Links
 - [7 command-line tools for data science](http://jeroenjanssens.com/2013/09/19/seven-command-line-tools-for-data-science.html)
