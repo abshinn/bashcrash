@@ -21,13 +21,21 @@
 - bc
 - tar
 - say
-- crontab/launchctl
 
 ### Interface with the outside world
 - ssh
 - curl/wget
 - scp
 - sftp
+
+### Process management
+- `ctrl+c`
+- `ctrl+z`
+- bg/fg
+- jobs
+- sleep
+- kill
+- crontab/launchctl
 
 ### Displaying files and information
 - cat
