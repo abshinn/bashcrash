@@ -36,6 +36,8 @@
 - sleep
 - kill
 - crontab/launchctl
+- screen/nohup
+- ps
 
 ### Displaying files and information
 - cat
