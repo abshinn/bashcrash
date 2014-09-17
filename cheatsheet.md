@@ -6,24 +6,28 @@
 - history
 - !#/usr/bin/env
 
-### Bash Basics
+### Basics
+- echo
+- cd/ls
+- mv/cp
+- !$
 - man
 - which
 - type
 - chmod
 - sudo
 - brew/apt-get
-- echo
-- cd/ls
-- mv/cp
 - find
 - bc
 - tar
 - say
+- crontab/launchctl
 
-### Fetching data
+### Interface with the outside world
+- ssh
 - curl/wget
 - scp
+- sftp
 
 ### Displaying files and information
 - cat
@@ -35,13 +39,14 @@
 
 ### Editing CSVs
 - grep
-- sed/awk
+- sed
+- awk
 - tr
 - cut
 
 ### Csvkit
 - `pip install csvkit`
-- csvlook
+- csvlook | less -S
 - csvcut
 - csvsort
 - csvstat
@@ -50,5 +55,18 @@
 - prettyprint json
 - json2csv (go)
 
-### Recommended package manager
-- brew
+### Recommendations
+- brew for osx
+- oh-my-zsh
+
+### Git Basics
+- git help <command>
+- git add/rm/mv
+- git commit
+- git pull/push
+- git remote add/-v
+- git log --oneline --graph
+- git diff 
+- git init/clone
+- git branch
+- git reset <commit>
