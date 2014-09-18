@@ -1,20 +1,101 @@
 BASHCRASH
 ===
 
-### BASH
+## Bash
 
-- History
-- Unix Mantra
-- AWS
+#### Basics
 
-#### Brief History of Bash
+List directory contents with `ls`, create a directory with `mkdir`, copy files with `cp`, move and rename files with `mv`, remove files and directories with `rm` and `rmdir`.
 
-A shell is a user interface to an operating system. Bash is a UNIX shell, released in 1989 as a free-software replacement for the Bourne Shell (sh). The Bourne shell was developed in 1977 for UNIX 7. Bash stands for Bourne-again shell. 
-
-(more history?)
+Most importantly, access the Bash manual `man` to get help with built-in commands.
 
 
-### Not built-in, but useful
+#### Environment
+
+**Where does Bash search for commands?**
+
+```bash
+echo $PATH
+```
+
+`$PATH` is a system variable string which contains paths separated by colons `:`. Bash searches the paths in `$PATH`, precedence goes to the command left-most path if you have more than one command in the search path. 
+
+It is very common for `$PATH` to be defined or appended within your shell initialization script. By default, that script is `~/.bash_profile`. 
+
+**Where are commands located in the system?**
+
+The very basic system commands are located in `/bin` and `/usr/bin/` directories.
+
+Have a look at those commands using `ls`:
+
+```bash
+ls -l /usr/bin
+```
+
+Or, search those commands by piping the above output to `grep`. In the below example, I search for the word `"grep"` to search for all of the regular expression commands related to `grep`.
+
+```bash
+ls -l /usr/bin | grep "grep"
+```
+
+Note that the quotation marks are not necessary. Bash knows that the pattern argument passed into `grep` is a string.
+
+To show the origin of a specific command, link, or alias, you can use either `which` or `type`. Also, most properly implemented commands and interpreters have a `--version` flag that will display the version of the command.
+
+```bash
+which python
+gzip --version
+python --version
+ruby --version
+```
+
+**Why is it useful to know this?**
+
+`#!`
+
+The hashbang! Also known as the shebang.
+
+_example python script: environ.py_
+
+```python
+#!/usr/bin/env python
+
+import os
+
+for item in os.environ.items():
+    print item
+```
+
+Supplying `#!/usr/bin/env python` in first line of a script will tell Bash to pass the script as an argument to your current environment's version of `python`. In other words, it is equivalent to running `python environ.py` in your current shell.
+
+But, there's one more step. That is to add the executable mode to your file using `chmod +x`.
+
+```bash
+chmod +x environ.py
+```
+
+Now, the file can be executed by typing out its relative or absolute path. In the current working directory, that will be `./`+`filename`.
+
+```bash
+./environ.py
+```
+
+For Bash scripts, it is common to just provide the path to `bash` in the shebang.
+
+_example bash script: _
+
+```bash
+#!/bin/bash
+
+cat printenv > environment.txt
+
+echo "environment variables stored in environment.txt"
+```
+
+[Learn More about shebang here.](http://en.wikipedia.org/wiki/Shebang_(Unix))
+
+
+#### Not built-in, but useful
 
 - homebrew
 - csvkit
@@ -22,15 +103,15 @@ A shell is a user interface to an operating system. Bash is a UNIX shell, releas
 - json2csv
 
 
-### Version Control with Git
+#### Recommended shell, zsh
+- [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+
+
+## Version Control with Git
 
 - Workflow
 - Merging 
 - When things go wrong
-
-
-### Recommended shell, zsh
-- [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
 
 ### Useful Links
