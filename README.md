@@ -1,18 +1,16 @@
 BASHCRASH
 ===
 
-## Bash
-
-#### Basics
+### Basics
 
 List directory contents with `ls`, create a directory with `mkdir`, copy files with `cp`, move and rename files with `mv`, remove files and directories with `rm` and `rmdir`.
 
 Most importantly, access the Bash manual `man` to get help with built-in commands.
 
 
-#### Environment
+### Environment
 
-**Where does Bash search for commands?**
+#### Where does Bash search for commands?
 
 ```bash
 echo $PATH
@@ -22,7 +20,7 @@ echo $PATH
 
 It is very common for `$PATH` to be defined or appended within your shell initialization script. By default, that script is `~/.bash_profile`. 
 
-**Where are commands located in the system?**
+#### Where are commands located in the system?
 
 The very basic system commands are located in `/bin` and `/usr/bin/` directories.
 
@@ -49,11 +47,9 @@ python --version
 ruby --version
 ```
 
-**Why is it useful to know this?**
+#### Why is it useful to know this?
 
-`#!`
-
-The hashbang! Also known as the shebang.
+`#!` The hashbang! Also known as the shebang.
 
 _example python script: environ.py_
 
@@ -82,7 +78,7 @@ Now, the file can be executed by typing out its relative or absolute path. In th
 
 For Bash scripts, it is common to just provide the path to `bash` in the shebang.
 
-_example bash script: _
+_example bash script: environ.sh_
 
 ```bash
 #!/bin/bash
@@ -95,7 +91,7 @@ echo "environment variables stored in environment.txt"
 [Learn More about shebang here.](http://en.wikipedia.org/wiki/Shebang_(Unix))
 
 
-#### Not built-in, but useful
+### Not built-in, but useful
 
 - homebrew
 - csvkit
@@ -103,7 +99,7 @@ echo "environment variables stored in environment.txt"
 - json2csv
 
 
-#### Recommended shell, zsh
+### Recommended shell, zsh
 - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
 
