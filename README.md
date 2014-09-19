@@ -16,7 +16,7 @@ List directory contents with `ls`, create a directory with `mkdir`, copy files w
 Most importantly, access the Bash manual `man` to get help with built-in commands.
 
 
-#### Some advanced use of the basic commands
+#### Optional matching, brace expansion, and !$
 
 Not only can you use the `*` wildcard, but bash also supports optional matching. Show all tsv and csv files in the current directory:
 
@@ -24,7 +24,13 @@ Not only can you use the `*` wildcard, but bash also supports optional matching.
 ls -l *.[tc]sv
 ```
 
-Repeat the last argument with `!$`. Show all csv files, then move them to a directory, `data/`:
+Expand items with brackets `{}`. Only list filenames with certain extensions:
+
+```bash
+ls -l *.{csv,tsv,sql,json}
+```
+
+Another useful feature is the ability to repeat the last argument with `!$`. Show all csv files, then move them to a directory, `data/`:
 
 ```bash
 ls -l *.csv
