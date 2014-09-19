@@ -1,6 +1,14 @@
 BASHCRASH
 ===
 
+A crash course in bash for the data scientist.
+
+
+### Unix philosphy
+
+"This is the Unix philosophy: Write programs that do one thing and do it well. Write programs to work together. Write programs to handle text streams, because that is a universal interface." -- [Doug McIlroy](http://www.faqs.org/docs/artu/ch01s06.html)
+
+
 ### Basics
 
 List directory contents with `ls`, create a directory with `mkdir`, copy files with `cp`, move and rename files with `mv`, remove files and directories with `rm` and `rmdir`.
@@ -42,12 +50,10 @@ To show the origin of a specific command, link, or alias, you can use either `wh
 
 ```bash
 which python
-gzip --version
 python --version
-ruby --version
 ```
 
-#### Why is it useful to know this?
+#### Scripting
 
 `#!` The hashbang! Also known as the shebang.
 
@@ -89,6 +95,7 @@ echo "environment variables stored in environment.txt"
 ```
 
 [Learn More about shebang here.](http://en.wikipedia.org/wiki/Shebang_(Unix))
+
 
 
 ### Not built-in, but useful
