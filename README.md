@@ -16,6 +16,13 @@ List directory contents with `ls`, create a directory with `mkdir`, copy files w
 Most importantly, access the Bash manual `man` to get help with built-in commands.
 
 
+#### Keyboard shortcuts
+
+Command-line keyboard shortcuts are immensely useful. For example, `ctrl+a` moves the cursor to the beginning of the line and `ctrl+e` moves the cursor to the end.
+
+See a list of shortcuts here: [Wikipedia article on Bash, shortcut section](http://en.wikipedia.org/wiki/Bash_(Unix_shell)#Keyboard_shortcuts)
+
+
 #### Optional matching, brace expansion, and !$
 
 Not only can you use the `*` wildcard, but bash also supports optional matching. Show all tsv and csv files in the current directory:
@@ -188,32 +195,56 @@ To display all current shell window processes use `ps`, and to see all current s
 
 ### Working with CSV
 
-### Working with Json
 
-### Git + Github
+CSVkit is a super-useful collection of commands that operate on CSVs. It is implemented in python, and can be easily installed with:
+
+```bash
+pip install csvkit
+```
+
+#### Displaying CSVs with csvlook
 
 
-### Not built-in, but useful
+To display a csv in an easy-to-read format, use `csvlook`:
 
-- homebrew
-- csvkit
-- jq
-- json2csv
+```bash
+cat example.csv | csvlook
+```
+
+If it is a csv with many columns and rows, this may not be a pretty output. In that case, you can then pipe the output to `less -S` for easier viewing. The `-S` flag tells `less` not to fold lines.
+
+```bash
+cat example.csv | csvlook | less -S
+```
+
+Furthermore, you can choose columns with `csvcut` and sort on specified columns with `csvsort`.
+
+#### Pandas' describe() on the command line
+
+CSVkit goes one step further. You can run summary statistics on a csv with the use of `csvstat`.
+
+
+### Working with JSON
+
+Another super-useful tool for displaying and manipulating data on the command line is JQ. You can download JQ with homebrew:
+
+```bash
+brew install jq
+```
+
+Or, if you don't have homebrew, you can find it here: [JQ](http://stedolan.github.io/jq/)
+
+JQ can pretty-print, extract, and manipulate JSON data on the command line.
+
+```bash
+cat example.json | jq ".[0]"
+```
 
 
 ### Recommended shell, zsh
 - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
-
-## Version Control with Git
-
-- Workflow
-- Merging 
-- When things go wrong
-
-
-### Useful Links
+### Other Useful Links
 - [Regexr](http://www.regexr.com/)
-- [Bash command-line keyboard shortcuts](http://en.wikipedia.org/wiki/Bash_(Unix_shell)#Keyboard_shortcuts)
 - [7 command-line tools for data science](http://jeroenjanssens.com/2013/09/19/seven-command-line-tools-for-data-science.html)
 - [Data Science at the Command Line](http://datascienceatthecommandline.com/)
