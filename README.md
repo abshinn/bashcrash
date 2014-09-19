@@ -18,7 +18,7 @@ Most importantly, access the Bash manual `man` to get help with built-in command
 
 #### Keyboard shortcuts
 
-Command-line keyboard shortcuts are immensely useful. For example, `ctrl+a` moves the cursor to the beginning of the line and `ctrl+e` moves the cursor to the end.
+Command-line keyboard shortcuts are immensely useful. For example, `ctrl+a` moves the cursor to the beginning of the line and `ctrl+e` moves the cursor to the end. Additionally, `ctrl+k` clears the line after the cursor, and `ctrl+l` clears the whole terminal window -- equivalent to `clear`.
 
 See a list of shortcuts here: [Wikipedia article on Bash, shortcut section](http://en.wikipedia.org/wiki/Bash_(Unix_shell)#Keyboard_shortcuts)
 
@@ -195,6 +195,13 @@ To display all current shell window processes use `ps`, and to see all current s
 
 ### Working with CSV
 
+#### Manipulation with sed and awk
+
+When CSVs are improperly formatted, sed and awk can come to the rescue.
+
+A somewhat useful blog post on csv manipulation: [Sultan of Awk](http://abshinn.github.io/bash/2014/05/17/sultan-of-awk/)
+
+#### CSVKIT
 
 CSVkit is a super-useful collection of commands that operate on CSVs. It is implemented in python, and can be easily installed with:
 
