@@ -1,3 +1,17 @@
+### Basics
+- echo
+- cd/ls
+- mv/cp
+- !$
+- man
+- which
+- chmod
+- sudo
+- bc
+- wc
+- tar
+- say
+
 ### Envinronment
 - ~/.bash_profile
 - $PATH
@@ -6,25 +20,17 @@
 - history
 - !#/usr/bin/env
 
-### Basics
-- echo
-- cd/ls
-- mv/cp
-- !$
-- man
-- which
-- type
-- chmod
-- sudo
-- brew/apt-get
-- find
-- bc
-- tar
-- say
+### Package Managers
+- brew (osx)
+- apt-get (linux)
+- pip/conda (python)
+- gem (ruby)
+- npm (js)
 
 ### Interface with the outside world
 - ssh
-- curl/wget
+- curl
+- wget (not built-in)
 - scp
 - sftp
 
@@ -36,18 +42,21 @@
 - sleep
 - kill
 - crontab/launchctl
-- screen/nohup
+- screen
+    - detach: `ctrl+a` + `d`
+    - list: screen -ls
+    - reattach: screen -r
 - ps
 
-### Displaying files and information
+### Display/manipulate file content
 - cat
 - head/tail
 - less/more
 - sort
 - uniq
-- wc
 
-### Editing CSVs
+### Find/replace
+- find
 - grep
 - sed
 - awk
@@ -61,13 +70,10 @@
 - csvsort
 - csvstat
 
-### Jq
-- prettyprint json
-- json2csv (go)
-
-### Recommendations
-- brew for osx
-- oh-my-zsh
+### Working with Json
+- jq '.[]'
+- [jq manual](http://stedolan.github.io/jq/manual/)
+- [json2cs](https://github.com/jehiah/json2csv)
 
 ### Git Basics
 - git help <command>
@@ -80,3 +86,11 @@
 - git init/clone
 - git branch
 - git reset <commit>
+
+### Recommendations
+- brew for osx
+- oh-my-zsh
+
+### Controling OSX
+- osascript
+
