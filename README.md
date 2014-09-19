@@ -4,7 +4,7 @@ BASHCRASH
 A crash course in bash for the data scientist.
 
 
-### Unix philosphy
+### Unix Philosophy
 
 "This is the Unix philosophy: Write programs that do one thing and do it well. Write programs to work together. Write programs to handle text streams, because that is a universal interface." -- [Doug McIlroy](http://www.faqs.org/docs/artu/ch01s06.html)
 
@@ -14,6 +14,40 @@ A crash course in bash for the data scientist.
 List directory contents with `ls`, create a directory with `mkdir`, copy files with `cp`, move and rename files with `mv`, remove files and directories with `rm` and `rmdir`.
 
 Most importantly, access the Bash manual `man` to get help with built-in commands.
+
+
+#### Some advanced use of the basic commands
+
+Not only can you use the `*` wildcard, but bash also supports optional matching. Show all tsv and csv files in the current directory:
+
+```bash
+ls -l *.[tc]sv
+```
+
+Repeat the last argument with `!$`. Show all csv files, then move them to a directory, `data/`:
+
+```bash
+ls -l *.csv
+mv !$ data/
+```
+
+#### Find
+
+The `find` command has several different applications. 
+
+To search all sub-directories within a directory called `zipfian` for python files:
+
+```bash
+find ~/zipfian -name ".py"
+```
+
+The find command can also execute a given command on all of the files returned by the search using the `exec` flag. To search for all python files within the `zipfian` directory that contain the string `"RandomForestClassifier"`:
+
+```bash
+find ~/zipfian -name "*.py" -exec grep -l "RandomForestClassifier" {} \;
+```
+
+Many more examples on the `find` command here: [Blog post by Alvin Alexander](http://alvinalexander.com/unix/edu/examples/find.shtml)
 
 
 ### Environment
@@ -96,6 +130,14 @@ echo "environment variables stored in environment.txt"
 
 [Learn More about shebang here.](http://en.wikipedia.org/wiki/Shebang_(Unix))
 
+
+### Process Management
+
+### Working with CSV
+
+### Working with Json
+
+### Git + Github
 
 
 ### Not built-in, but useful
