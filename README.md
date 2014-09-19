@@ -41,7 +41,7 @@ To search all sub-directories within a directory called `zipfian` for python fil
 find ~/zipfian -name ".py"
 ```
 
-The find command can also execute a given command on all of the files returned by the search using the `exec` flag. To search for all python files within the `zipfian` directory that contain the string `"RandomForestClassifier"`:
+The find command can also execute a given command on all of the files returned by the search using the `-exec` flag. To search for all python files within the `zipfian` directory that contain the string `"RandomForestClassifier"`:
 
 ```bash
 find ~/zipfian -name "*.py" -exec grep -l "RandomForestClassifier" {} \;
@@ -128,10 +128,57 @@ cat printenv > environment.txt
 echo "environment variables stored in environment.txt"
 ```
 
-[Learn More about shebang here.](http://en.wikipedia.org/wiki/Shebang_(Unix))
+Learn More about shebang here: [Shebang wikipedia article](http://en.wikipedia.org/wiki/Shebang_(Unix))
 
 
 ### Process Management
+
+#### ; and &
+
+To run commands in a batch, separate them by semicolons:
+
+```bash
+command1 ; command2
+```
+
+Or, to run both commands concurrently:
+
+```bash
+command1 & command2
+```
+
+Note: `command1` starts running in the background, and `command2` runs in the foreground.
+
+#### ctrl, bg, fg, and kill
+
+To quit a process running in the foreground with `ctrl+c` or in some cases, `ctrl+d`.
+
+Suspend a process running in the foreground with `ctrl+z`. You will see something like this:
+
+```
+^Z
+[2]  + 71826 suspended  ./energy.py
+```
+
+Resume a suspended process in the foreground with `fg`. Or you can run it in the background with `bg`, which is equivalent to running `./energy.py &`.
+
+Use `jobs -l` to list ongoing and suspended jobs with their pid (process id). The output looks something like this:
+
+```
+[1]  - 71979 running    ./pima.py
+[2]  + 71826 suspended  ./energy.py
+```
+
+Finally, you can quit that suspended process with `kill`:
+
+```bash
+kill 71826
+```
+
+#### ps and top
+
+To display all current shell window processes use `ps`, and to see all current system processes use `ps ax`. Or, to see what process is eating up all of your memory have a look at the `top` command.
+
 
 ### Working with CSV
 
