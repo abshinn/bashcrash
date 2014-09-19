@@ -43,15 +43,15 @@
 - kill
 - crontab/launchctl
 - screen
-    - detach: `ctrl+a` + `d`
-    - list: screen -ls
-    - reattach: screen -r
+    - `ctrl+a` + `d` (detach)
+    - screen -ls (list)
+    - screen -r (reattach)
 - ps
 
 ### Display/manipulate file content
 - cat
 - head/tail
-- less/more
+- less
 - sort
 - uniq
 
