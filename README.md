@@ -201,7 +201,7 @@ When CSVs are improperly formatted, sed and awk can come to the rescue.
 
 A somewhat useful blog post on csv manipulation: [Sultan of Awk](http://abshinn.github.io/bash/2014/05/17/sultan-of-awk/)
 
-#### CSVKIT
+#### CSVkit
 
 CSVkit is a super-useful collection of commands that operate on CSVs. It is implemented in python, and can be easily installed with:
 
@@ -226,9 +226,11 @@ cat example.csv | csvlook | less -S
 
 Furthermore, you can choose columns with `csvcut` and sort on specified columns with `csvsort`.
 
-#### Pandas' describe() on the command line
+#### Summary statistics on the command line
 
-CSVkit goes one step further. You can run summary statistics on a csv with the use of `csvstat`.
+Much like with Pandas' describe method, you can run summary statistics on a CSV with the use of `csvstat`.
+
+For more information, see: [CSVkit documentation](https://csvkit.readthedocs.org/en/0.9.0/)
 
 
 ### Working with JSON
