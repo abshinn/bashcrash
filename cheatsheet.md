@@ -4,7 +4,7 @@
 - mv/cp
 - !$
 - man
-- which
+- which/type
 - chmod
 - sudo
 - bc
@@ -30,7 +30,6 @@
 ### Interface with the outside world
 - ssh
 - curl
-- wget (not built-in)
 - scp
 - sftp
 
@@ -47,6 +46,7 @@
     - screen -ls (list)
     - screen -r (reattach)
 - ps
+- purge
 
 ### Display/manipulate file content
 - cat
