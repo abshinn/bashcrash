@@ -141,6 +141,8 @@ cat printenv > environment.txt
 echo "environment variables stored in environment.txt"
 ```
 
+For an example Bash script, see [quakes.sh](https://github.com/abshinn/usgs/blob/master/code/quakes.sh), a simple wrapper for the USGS earthquake feed.
+
 Learn more about shebang here: [Shebang wikipedia article](http://en.wikipedia.org/wiki/Shebang_(Unix))
 
 Learn more about writing scripts in the Bash language here: [Robert Kline's Bash Tutorial](http://www.cs.wcupa.edu/rkline/linux/bash-basics.html#execute)
@@ -205,7 +207,12 @@ After many hours of uptime and usage your computer can build up inactive memory.
 
 When CSVs are improperly formatted, sed and awk can come to the rescue. For help on crafting regular expressions, see [Regexr](http://www.regexr.com/).
 
-A somewhat useful blog post on csv manipulation: [Sultan of Awk](http://abshinn.github.io/bash/2014/05/17/sultan-of-awk/)
+##### Blog posts on csv manipulation using `sed` and `awk` 
+
+[Greg Reda: Useful commands for data science](http://www.gregreda.com/2013/07/15/unix-commands-for-data-science/)
+
+[Me: Sultan of Awk](http://abshinn.github.io/bash/2014/05/17/sultan-of-awk/)
+
 
 #### CSVkit
 
@@ -216,7 +223,6 @@ pip install csvkit
 ```
 
 #### Displaying CSVs with csvlook
-
 
 To display a csv in an easy-to-read format, use `csvlook`:
 
