@@ -207,11 +207,10 @@ After many hours of uptime and usage your computer can build up inactive memory.
 
 When CSVs are improperly formatted, sed and awk can come to the rescue. For help on crafting regular expressions, see [Regexr](http://www.regexr.com/).
 
-##### Blog posts on csv manipulation using `sed` and `awk` 
+Blog posts on csv manipulation using `sed` and `awk`:
 
-[Greg Reda: Useful commands for data science](http://www.gregreda.com/2013/07/15/unix-commands-for-data-science/)
-
-[Me: Sultan of Awk](http://abshinn.github.io/bash/2014/05/17/sultan-of-awk/)
+- [Greg Reda: Useful commands for data science](http://www.gregreda.com/2013/07/15/unix-commands-for-data-science/)
+- [Adam Shinn: Sultan of Awk](http://abshinn.github.io/bash/2014/05/17/sultan-of-awk/)
 
 
 #### CSVkit
