@@ -73,7 +73,7 @@ echo $PATH
 
 `$PATH` is a system variable string which contains paths separated by colons `:`. Bash searches the paths in `$PATH`, precedence goes to the command left-most path if you have more than one command in the search path. 
 
-It is very common for `$PATH` to be defined or appended within your shell initialization script. By default, that script is `~/.bash_profile`. 
+It is very common for `$PATH` to be defined or appended within your shell initialization script. By default, that script is `~/.bash_profile`. If you are using [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh), then your initialization script is `~/.zshrc`.
 
 #### Where are commands located in the system?
 
@@ -141,7 +141,9 @@ cat printenv > environment.txt
 echo "environment variables stored in environment.txt"
 ```
 
-Learn More about shebang here: [Shebang wikipedia article](http://en.wikipedia.org/wiki/Shebang_(Unix))
+Learn more about shebang here: [Shebang wikipedia article](http://en.wikipedia.org/wiki/Shebang_(Unix))
+
+Learn more about writing scripts in the Bash language here: [Robert Kline's Bash Tutorial](http://www.cs.wcupa.edu/rkline/linux/bash-basics.html#execute)
 
 
 ### Process Management
@@ -192,12 +194,16 @@ kill 71826
 
 To display all current shell window processes use `ps`, and to see all current system processes use `ps ax`. Or, to see what process is eating up all of your memory have a look at the `top` command.
 
+#### purge
+
+After many hours of uptime and usage your computer can build up inactive memory. Darwin OS's `purge` simulates restart conditions by flushing disk cache.
+
 
 ### Working with CSV
 
 #### Manipulation with sed and awk
 
-When CSVs are improperly formatted, sed and awk can come to the rescue.
+When CSVs are improperly formatted, sed and awk can come to the rescue. For help on crafting regular expressions, see [Regexr](http://www.regexr.com/).
 
 A somewhat useful blog post on csv manipulation: [Sultan of Awk](http://abshinn.github.io/bash/2014/05/17/sultan-of-awk/)
 
@@ -241,7 +247,7 @@ Another super-useful tool for displaying and manipulating data on the command li
 brew install jq
 ```
 
-Or, if you don't have homebrew, you can find it here: [JQ](http://stedolan.github.io/jq/)
+Or, if you don't have homebrew, you can find it here: [JQ home](http://stedolan.github.io/jq/)
 
 JQ can pretty-print, extract, and manipulate JSON data on the command line.
 
@@ -252,6 +258,8 @@ cat example.json | jq ".[0]"
 
 ### Recommended shell, zsh
 - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+- [my zshrc profile](https://github.com/abshinn/oh-my-zsh/blob/master/abshinn.zshrc)
+
 
 ### Other Useful Links
 - [Regexr](http://www.regexr.com/)
