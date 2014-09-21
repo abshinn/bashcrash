@@ -141,11 +141,9 @@ cat printenv > environment.txt
 echo "environment variables stored in environment.txt"
 ```
 
-For an example Bash script, see [quakes.sh](https://github.com/abshinn/usgs/blob/master/code/quakes.sh), a simple wrapper for the USGS earthquake feed.
-
-Learn more about shebang here: [Shebang wikipedia article](http://en.wikipedia.org/wiki/Shebang_(Unix))
-
-Learn more about writing scripts in the Bash language here: [Robert Kline's Bash Tutorial](http://www.cs.wcupa.edu/rkline/linux/bash-basics.html#execute)
+- For an example Bash script, see [quakes.sh](https://github.com/abshinn/usgs/blob/master/code/quakes.sh), a simple wrapper for the USGS earthquake feed.
+- Learn more about shebang here: [Shebang wikipedia article](http://en.wikipedia.org/wiki/Shebang_(Unix))
+- Learn more about writing scripts in the Bash language here: [Robert Kline's Bash Tutorial](http://www.cs.wcupa.edu/rkline/linux/bash-basics.html#execute)
 
 
 ### Process Management
@@ -221,7 +219,7 @@ CSVkit is a super-useful collection of commands that operate on CSVs. It is impl
 pip install csvkit
 ```
 
-#### Displaying CSVs with csvlook
+##### Displaying CSVs with csvlook
 
 To display a csv in an easy-to-read format, use `csvlook`:
 
@@ -237,7 +235,7 @@ cat example.csv | csvlook | less -S
 
 Furthermore, you can choose columns with `csvcut` and sort on specified columns with `csvsort`.
 
-#### Summary statistics on the command line
+##### Summary statistics on the command line
 
 Much like with Pandas' describe method, you can run summary statistics on a CSV with the use of `csvstat`.
 
